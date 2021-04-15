@@ -26,6 +26,7 @@ python Lipi.py
 3. Auto correct
 4. Preview Window
 5. Support for spellings of _West Bengal Bangla Academy_
-6. Make it  Installable
+6. Beta Testing
+7. Make it  Installable
 # Demo
 <img src="image/demo.gif" width="540" height="270" />
