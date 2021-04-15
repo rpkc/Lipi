@@ -13,9 +13,10 @@ A Simple Bangla keyboard made with python
 
 ## To do List
 1. Menu 
-2. Auto correct
-3. Preview Window
-4. Support for spellings of `West Bengal Bangla Academy`
-5. Make it  Installable
+2. Smart Backspace
+3. Auto correct
+4. Preview Window
+5. Support for spellings of `West Bengal Bangla Academy`
+6. Make it  Installable
 # Demo
 <img src="image/demo.gif" width="540" height="270" />
