@@ -12,7 +12,7 @@ A Minimal Bangla keyboard
 * [Avro keyboard](https://www.omicronlab.com/avro-keyboard.html)
 
 ### Why this project?
-* to check my skills
+* <strike>to check my skills</strike>
 * I am challeged to make this keyboard.
 
 ## run (for Now)
