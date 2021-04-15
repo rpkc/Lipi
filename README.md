@@ -14,7 +14,7 @@ A Minimal Bangla keyboard made with python
 * to check my skills
 * I was challeged to make this keyboard.
 
-## run
+## run (for Now)
 ```console
 python Lipi.py
 ```
