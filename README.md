@@ -21,7 +21,7 @@ python Lipi.py
 
 
 ## To do List
-1. Menu 
+<strike>1. Minimal Structure</strike>
 2. Smart Backspace
 3. Auto correct
 4. Preview Window
