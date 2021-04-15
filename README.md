@@ -9,7 +9,7 @@ A Minimal Bangla keyboard made with python
 
 ### Why this project?
 * to check my skills
-* Because someone challeged me to make this keyboard.
+* I was challeged to make this keyboard.
 
 ## run
 ```console
