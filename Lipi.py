@@ -1,8 +1,6 @@
 from KeyBoard import KeyBoard
 import tkinter
 
-def donothing():
-    pass
 
 class Lipi():
     def __init__(self):
@@ -15,11 +13,14 @@ class Lipi():
         self.kb=KeyBoard()
     
     def __toogle(self):
+        # to start or stop keyboard
         self.start=not self.start
         if self.start:
+            # when start make text bengali
             self.kb.start()
             self.button['text']="বাংলা"
         else:
+            # when start make text Default
             self.kb.stop()
             self.button['text']="ENGLISH"
 
