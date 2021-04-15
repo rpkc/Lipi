@@ -3,7 +3,7 @@ A Minimal Bangla keyboard made with python
 <br>NB: `Software in progress`
 
 ## Libreary used
-* [pyavrophonetic](https://github.com/TrendBreaker/pyAvroPhonetic) for `english to bengali convertion` ( NB: `৳` changed to `₹` )
+* [pyavrophonetic](https://github.com/TrendBreaker/pyAvroPhonetic) for `english to bengali convertion` (_NB:_ <b>৳</b> changed to <b>₹</b> )
 * [keyboard](https://github.com/boppreh/keyboard) for `taking control of the keyboard`
 * [tkinter](https://wiki.python.org/moin/TkInter) for `gui stuffs`
 
