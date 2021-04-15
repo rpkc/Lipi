@@ -1,5 +1,5 @@
 # Lipi
-A Simple Bangla keyboard made with python
+A Minimal Bangla keyboard made with python
 <br>NB: `Software in progress`
 
 ## Libreary used
