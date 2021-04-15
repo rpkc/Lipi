@@ -13,7 +13,7 @@ A Minimal Bangla keyboard
 
 ### Why this project?
 * to check my skills
-* I was challeged to make this keyboard.
+* I am challeged to make this keyboard.
 
 ## run (for Now)
 ```console
