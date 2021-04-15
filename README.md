@@ -6,7 +6,7 @@ A Minimal Bangla keyboard
 * [pyavrophonetic](https://github.com/TrendBreaker/pyAvroPhonetic) for `english to bengali convertion` 
    * ৳</b> changed to <b>₹</b>
 * [keyboard](https://github.com/boppreh/keyboard) for `taking control of the keyboard`
-* [tkinter](https://wiki.python.org/moin/TkInter) for `gui stuffs`
+* [tkinter](https://wiki.python.org/moin/TkInter) for `GUI stuffs`
 
 ### Inspired By 
 * [Avro keyboard](https://www.omicronlab.com/avro-keyboard.html)
@@ -22,7 +22,7 @@ python Lipi.py
 
 
 ## To do List
-1. <strike>Minimal Structure</strike> `14.03.2021`
+1. <strike>Minimal Structure (GUI)</strike> `14.03.2021`
 2. <strike>Minimal Working</strike> `15.04.2021`
 3. Smart Backspace
 4. Auto correct
