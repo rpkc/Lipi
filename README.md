@@ -1,5 +1,5 @@
 # Lipi
-A Minimal Bangla keyboard made with python
+A Minimal Bangla keyboard
 
 ## Libreary used
 * [pyavrophonetic](https://github.com/TrendBreaker/pyAvroPhonetic) for `english to bengali convertion` (_NB:_ <b>৳</b> changed to <b>₹</b> )
