@@ -21,7 +21,7 @@ python Lipi.py
 
 
 ## To do List
-1. <strike>Minimal Structure</strike>
+1. <strike>Minimal Structure</strike> `15.04.2021`
 2. Smart Backspace
 3. Auto correct
 4. Preview Window
