@@ -7,6 +7,9 @@ A Minimal Bangla keyboard made with python
 * [keyboard](https://github.com/boppreh/keyboard) for `taking control of the keyboard`
 * [tkinter](https://wiki.python.org/moin/TkInter) for `gui stuffs`
 
+### Inspired By 
+* [Avro keyboard](https://www.omicronlab.com/avro-keyboard.html)
+
 ### Why this project?
 * to check my skills
 * I was challeged to make this keyboard.
