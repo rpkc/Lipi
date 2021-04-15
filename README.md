@@ -11,6 +11,12 @@ A Simple Bangla keyboard made with python
 * to check my skills
 * Because someone challeged me to make this keyboard.
 
+## run
+```console
+python Lipi.py
+```
+
+
 ## To do List
 1. Menu 
 2. Smart Backspace
