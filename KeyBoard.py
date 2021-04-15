@@ -24,6 +24,7 @@ from pyavrophonetic import avro
 import keyboard
 
 
+
 class KeyBoard():
     def __init__(self):
         self.state=keyboard._State()
@@ -31,30 +32,39 @@ class KeyBoard():
         self.halt:bool=False
  
     def keyboardHandeler(self,event):
+        #it triggers when 'space' or 'enter' is presses
         triggered_hoykey:bool=event.name=='space' or event.name=='enter'
+        # if halt happens, meaning Ctrl is pressed    
         if self.halt:
-            return        
+            return
+        # when triggers
         if triggered_hoykey and self.state.current!="":
-            # print(self.state.current)
+            # backspace all characters in buffer and
+            # avro.parse() makes all stored characters bengali
             replacement:str='\b'*(len(self.state.current)+1) + avro.parse(self.state.current)+" "
+            # make buffer empty
             self.state.current=""
-            # print(replacement)
+            # print all chars 
             keyboard.write(replacement)
-
+        # if keystroke is not a visible chaacter    
         elif len(event.name)>1:
             if event.name == 'backspace':
                 if len(self.state.current)>0:
-                    self.state.current=self.state.current[:-1]            
+                    self.state.current=self.state.current[:-1]
+        # add new char to main string           
         else:
             self.state.current+=event.name
 
-
+# two functions to halt the process
+    # start halt
     def __yesHalt(self,event):
         self.halt=True
+    # stop halt    
     def __noHalt(self,event):
         self.halt=False
 
     def start(self):
+        # when 'ctrl' will be pressed, do nothing
         keyboard.on_press_key('ctrl',self.__yesHalt)
         keyboard.on_release_key('ctrl',self.__noHalt)
         keyboard.on_press(self.keyboardHandeler)
