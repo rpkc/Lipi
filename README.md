@@ -22,12 +22,13 @@ python Lipi.py
 
 
 ## To do List
-1. <strike>Minimal Structure</strike> `15.04.2021`
-2. Smart Backspace
-3. Auto correct
-4. Preview Window
-5. Support for spellings of _West Bengal Bangla Academy_
-6. Beta Testing
-7. Make it  Installable
+1. <strike>Minimal Structure</strike> `14.03.2021`
+2. <strike>Minimal Working</strike> `15.04.2021`
+3. Smart Backspace
+4. Auto correct
+5. Preview Window
+6. Support for spellings of _West Bengal Bangla Academy_
+7. Beta Testing
+8. Make it  Installable
 # Demo
 <img src="image/demo.gif" width="540" height="270" />
