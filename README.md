@@ -25,7 +25,7 @@ python Lipi.py
 2. Smart Backspace
 3. Auto correct
 4. Preview Window
-5. Support for spellings of `West Bengal Bangla Academy`
+5. Support for spellings of _West Bengal Bangla Academy_
 6. Make it  Installable
 # Demo
 <img src="image/demo.gif" width="540" height="270" />
