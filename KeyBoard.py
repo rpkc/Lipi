@@ -20,54 +20,37 @@
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 # SOFTWARE.
 
-from pyavrophonetic import avro
-import keyboard
+from pyavrophonetic.avro import parse
+from keyboard import on_press,on_press_key,is_pressed,write,unhook_all
 
-
-
+CODE_DICT:dict={'space':' ','enter':'\n'}
+ 
 class KeyBoard():
     def __init__(self):
-        self.state=keyboard._State()
-        self.state.current:str=""
-        self.halt:bool=False
- 
-    def keyboardHandeler(self,event):
-        #it triggers when 'space' or 'enter' is presses
-        triggered_hoykey:bool=event.name=='space' or event.name=='enter'
-        # if halt happens, meaning Ctrl is pressed    
-        if self.halt:
-            return
-        # when triggers
-        if triggered_hoykey and self.state.current!="":
-            # backspace all characters in buffer and
-            # avro.parse() makes all stored characters bengali
-            replacement:str='\b'*(len(self.state.current)+1) + avro.parse(self.state.current)+" "
-            # make buffer empty
-            self.state.current=""
-            # print all chars 
-            keyboard.write(replacement)
-        # if keystroke is not a visible chaacter    
-        elif len(event.name)>1:
-            if event.name == 'backspace':
-                if len(self.state.current)>0:
-                    self.state.current=self.state.current[:-1]
-        # add new char to main string           
-        else:
-            self.state.current+=event.name
+        self.current:str=""
+        self.replace:str=""
 
-# two functions to halt the process
-    # start halt
-    def __yesHalt(self,event):
-        self.halt=True
-    # stop halt    
-    def __noHalt(self,event):
-        self.halt=False
+    def keyPressEvent(self,event):
+        # if event is a single char and `ctrl` is not pressed
+        if len(event.name)==1 and not is_pressed('ctrl'):
+            # then add that word to current state
+            self.current+=event.name   
+
+        elif event.name=='backspace' and self.current!="":
+            #when backspace is pressed, delete the last character of current string
+            self.current=self.current[:-1]
+
+    def onPressHotkey(self,event)->None:
+        # when hotkey ('enter' or 'space') is pressed, this will parse the text 
+        self.replace:str='\b'*(len(self.current)+1) + parse(self.current) + CODE_DICT[event.name]
+        self.current=""
+        write(self.replace)
+
 
     def start(self):
-        # when 'ctrl' will be pressed, do nothing
-        keyboard.on_press_key('ctrl',self.__yesHalt)
-        keyboard.on_release_key('ctrl',self.__noHalt)
-        keyboard.on_press(self.keyboardHandeler)
+        on_press(self.keyPressEvent)
+        on_press_key('enter',self.onPressHotkey)
+        on_press_key('space',self.onPressHotkey)
 
     def stop(self):
-        keyboard.unhook_all() 
+        unhook_all()
