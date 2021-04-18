@@ -1,6 +1,6 @@
 # Lipi
 A Minimal Bangla keyboard 
-<br> Version: _15.04.2021_
+<br> Version: _18.04.2021_
 
 ## Libreary used
 * [pyavrophonetic](https://github.com/TrendBreaker/pyAvroPhonetic) for `english to bengali convertion` 
