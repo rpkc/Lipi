@@ -4,7 +4,7 @@ A Minimal Bangla keyboard
 
 ## Libreary used
 * [pyavrophonetic](https://github.com/TrendBreaker/pyAvroPhonetic) for `english to bengali convertion` 
-   * ৳</b> changed to <b>₹</b>
+   * <b>৳</b>is changed to <b>₹</b>
 * [keyboard](https://github.com/boppreh/keyboard) for `taking control of the keyboard`
 * [tkinter](https://wiki.python.org/moin/TkInter) for `GUI stuffs`
 
