@@ -4,7 +4,7 @@ A Minimal Bangla keyboard
 
 ## Libreary used
 * [pyavrophonetic](https://github.com/TrendBreaker/pyAvroPhonetic) for `english to bengali convertion` 
-   * <b>৳</b>is changed to <b>₹</b>
+   * Taka Sign (৳) is changed to Rupee Sign (₹)
 * [keyboard](https://github.com/boppreh/keyboard) for `taking control of the keyboard`
 * [tkinter](https://wiki.python.org/moin/TkInter) for `GUI stuffs`
 
