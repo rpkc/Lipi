@@ -27,8 +27,9 @@ CODE_DICT:dict={'space':' ','enter':'\n'}
  
 class KeyBoard():
     def __init__(self):
-        self.current:str=""
-        self.replace:str=""
+        self.current:str=""  # to store the current string
+        self.bengali:str=""  # to store the bengali translated String
+        self.previous:str="" # to store the previous value of `current` string
 
     def keyPressEvent(self,event):
         # if event is a single char and `ctrl` is not pressed
@@ -36,21 +37,37 @@ class KeyBoard():
             # then add that word to current state
             self.current+=event.name   
 
-        elif event.name=='backspace' and self.current!="":
-            #when backspace is pressed, delete the last character of current string
-            self.current=self.current[:-1]
-
     def onPressHotkey(self,event)->None:
-        # when hotkey ('enter' or 'space') is pressed, this will parse the text 
-        self.replace:str='\b'*(len(self.current)+1) + parse(self.current) + CODE_DICT[event.name]
-        self.current=""
-        write(self.replace)
+        self.bengali=parse(self.current) #parsed value will be stored in
+        
+        # fire backspace to delete previous word
+        # then place the bengali word followed by triggered key 
+        replace:str='\b'*(len(self.current)+1) + self.bengali + CODE_DICT[event.name]
+        
+        self.previous=self.current # store the current value to previous for `smart backspace` 
+        self.current="" 
+        write(replace) # write the string
 
+    def smartBackspace(self,event)->None:
+        if self.current!="": # for normal backspace
+            self.current=self.current[:-1] # omit the last char
+        # ** smart Backspace model **
+        # ---------------------------
+        # if `shift` is pressed and `bengali` string is not empty    
+        elif is_pressed('shift') and self.bengali!="":
+            # fire backspace to delete previous word
+            # and the place the `previous`    
+            replace:str='\b'*(len(self.bengali))+self.previous
+            # now set the the current to previous
+            self.current=self.previous
+            write(replace) # write the string   
 
     def start(self):
         on_press(self.keyPressEvent)
         on_press_key('enter',self.onPressHotkey)
         on_press_key('space',self.onPressHotkey)
+        on_press_key('backspace',self.smartBackspace)
+        self.current:str=""
 
     def stop(self):
         unhook_all()
