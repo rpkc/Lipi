@@ -1,6 +1,6 @@
 # Lipi
 A Minimal Bangla keyboard 
-<br>Current Version: `18.04.2021`
+<br>Current Version: `21.04.2021`
 
 ## Libreary used
 * [pyavrophonetic](https://github.com/TrendBreaker/pyAvroPhonetic) for `english to bengali convertion` 
@@ -24,7 +24,7 @@ python Lipi.py
 ## To do List
 1. <strike>Minimal Structure (GUI)</strike> `14.03.2021`
 2. <strike>Minimal Working</strike> `15.04.2021`
-3. Smart Backspace
+3. <strike>Smart Backspace</strike> `21.04.2021`
 4. Auto correct
 5. Preview Window
 6. Support for spellings of _West Bengal Bangla Academy_
