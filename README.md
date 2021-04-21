@@ -25,10 +25,11 @@ python Lipi.py
 1. <strike>Minimal Structure (GUI)</strike> `14.03.2021`
 2. <strike>Minimal Working</strike> `15.04.2021`
 3. <strike>Smart Backspace</strike> `21.04.2021`
-4. Auto correct
-5. Preview Window
-6. Support for spellings of _West Bengal Bangla Academy_
-7. Beta Testing
-8. Make it  Installable
+4. Virtual Keyboard
+5. Auto correct
+6. Preview Window
+7. Support for spellings of _West Bengal Bangla Academy_
+8. Beta Testing
+9. Make it  Installable
 # Demo
 <img src="image/demo.gif" width="540" height="270" />
