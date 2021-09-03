@@ -1,5 +1,5 @@
 # Lipi
-A Minimal Bangla keyboard 
+A Minimal Bangla keyboard <br>
 ![GitHub](https://img.shields.io/github/license/rpkc/Lipi)
 ![GitHub last commit](https://img.shields.io/github/last-commit/rpkc/Lipi?style=plastic)
 
