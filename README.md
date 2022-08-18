@@ -2,6 +2,7 @@
 A Minimal Bangla keyboard <br>
 ![GitHub](https://img.shields.io/github/license/rpkc/Lipi)
 ![GitHub last commit](https://img.shields.io/github/last-commit/rpkc/Lipi?style=plastic)
+![Language](https://img.shields.io/badge/Python-white?style=plastic&logo=python)
 
 ## Libreary used
 * [pyavrophonetic](https://github.com/TrendBreaker/pyAvroPhonetic) for `english to bengali convertion` 
